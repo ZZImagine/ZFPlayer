@@ -132,7 +132,7 @@
     self.titleLabel.frame = CGRectMake(min_x, min_y, min_w, min_h);
     self.titleLabel.zf_centerY = self.backBtn.zf_centerY;
     
-    min_h = iPhoneX ? 100 : 73;
+    min_h = 100;
     min_x = 0;
     min_y = min_view_h - min_h;
     min_w = min_view_w;
@@ -251,6 +251,7 @@
                 if (self.seekToPlay) {
                     [self.player.currentPlayerManager play];
                 }
+                self.player.currentPlayerManager.rate = self.player.currentPlayerManager.rate;
             }
         }];
     } else {
